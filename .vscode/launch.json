@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Deno - build.ts",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "/Users/jackwitt/.deno/bin/deno",
+            "runtimeArgs": ["run", "--inspect-brk", "-A", "${workspaceFolder}/scripts/build.ts"],
+            "attachSimplePort": 9229,
+            "outputCapture": "std"
+        },
+        {
+            "name": "Deno - all tests",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "/Users/jackwitt/.deno/bin/deno",
+            "runtimeArgs": ["test", "--inspect-brk", "-A", "${workspaceFolder}/tests"],
+            "attachSimplePort": 9229,
+            "outputCapture": "std"
+        }
+    ]
+}
