@@ -1,4 +1,4 @@
-import print from "../utils/console/index.ts";
+import print from "../lib/console/index.ts";
 
 const clean = () => {
   try {

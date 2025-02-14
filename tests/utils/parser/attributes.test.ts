@@ -1,6 +1,6 @@
 import { describe, it } from "jsr:@std/testing/bdd";
 import { expect } from "jsr:@std/expect";
-import { parseAttributes } from "../../../src/utils/helpers/parser/index.ts";
+import { parseAttributes } from "../../../src/lib/helpers/parser/index.ts";
 
 describe("parser/attributes", () => {
   it("returns null for empty HTML string", () => {
