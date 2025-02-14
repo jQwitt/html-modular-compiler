@@ -1,0 +1,6 @@
+@use 'utils/variables' as var;
+
+html, body {
+	background: var.$background;
+	color: var.$text;
+}
