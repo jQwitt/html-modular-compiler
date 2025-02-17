@@ -1,8 +1,9 @@
 import print from '../lib/console/index.ts';
 import buildComponentMap from '../lib/helpers/buildComponentMap.ts';
-import { decoder, encoder, ENTRY_POINT, OUTPUT_DIR } from '../lib/index.ts';
+import { decoder, ENTRY_POINT, OUTPUT_DIR } from '../lib/index.ts';
 import injectComponents from '../lib/helpers/injectComponents.ts';
 import parse from '../lib/helpers/parser/dom.ts';
+import { writeOutput } from '../lib/helpers/fs/writeOutput.ts';
 
 const build = () => {
 	try {
@@ -24,11 +25,9 @@ const build = () => {
 			);
 		}
 
-		Deno.writeFileSync(
-			`${OUTPUT_DIR}/index.html`,
-			encoder.encode(output),
-		);
-		print.standard(`compiled to ${OUTPUT_DIR}/index.html`);
+		if (writeOutput(output)) {
+			print.standard(`compiled to ${OUTPUT_DIR}/index.html`);
+		}
 
 		print.success('Build completed!');
 	} catch (e) {
