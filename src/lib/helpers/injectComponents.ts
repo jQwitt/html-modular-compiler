@@ -3,9 +3,7 @@ import { HTMLComponentMap } from '../types.ts';
 
 const injectComponents = (components: HTMLComponentMap, doc: Document) => {
 	for (
-		const { name, attributes: baseAttributes } of Object.values(
-			components,
-		)
+		const { name, attributes: baseAttributes } of Object.values(components)
 	) {
 		const found = doc.querySelectorAll(name);
 
@@ -13,9 +11,7 @@ const injectComponents = (components: HTMLComponentMap, doc: Document) => {
 		for (const element of found) {
 			const merged: Record<string, string> = {};
 
-			for (
-				const [key, base] of Object.entries(baseAttributes ?? {})
-			) {
+			for (const [key, base] of Object.entries(baseAttributes || {})) {
 				const attr = element.attributes.getNamedItem(key);
 				merged[key] = attr ? `${base} ${attr.value}` : base;
 			}
