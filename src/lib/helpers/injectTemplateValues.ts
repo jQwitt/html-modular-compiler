@@ -6,23 +6,19 @@ const injectTemplateValues = (
 	templateValues: Record<string, string>,
 	doc: Document,
 ): Document => {
-	const documentString = doc.documentElement?.innerHTML || '';
-	if (!documentString.length) return doc;
-
 	const templateKeys = Object.keys(templateValues);
-
 	if (!templateValues || !templateKeys.length) {
 		print.warn('no template values found! skipping...');
 		return doc;
 	}
 
-	let resultString = documentString;
+	let documentString = doc.documentElement?.innerHTML || '';
 	for (const key of templateKeys) {
 		const searchKey = new RegExp(`{${key}}`, 'g');
-		const match = resultString.match(searchKey);
+		const match = documentString.match(searchKey);
 
 		if (match) {
-			resultString = resultString.replaceAll(
+			documentString = documentString.replaceAll(
 				searchKey,
 				templateValues[key],
 			);
@@ -35,9 +31,7 @@ const injectTemplateValues = (
 
 	// anything left over is not a template value
 	for (
-		const unsupportedTemplateValue of resultString.matchAll(
-			/{(.+?)}/g,
-		)
+		const unsupportedTemplateValue of documentString.matchAll(/{(.+?)}/gi)
 	) {
 		const [, text] = unsupportedTemplateValue;
 		print.warn(
@@ -45,7 +39,7 @@ const injectTemplateValues = (
 		);
 	}
 
-	return parse(resultString, 'text/html');
+	return parse(documentString, 'text/html');
 };
 
 export default injectTemplateValues;
