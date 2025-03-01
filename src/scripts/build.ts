@@ -5,7 +5,7 @@ import injectComponents from '../lib/helpers/injectComponents.ts';
 import parse from '../lib/helpers/parser/dom.ts';
 import { writeOutput } from '../lib/helpers/fs/writeOutput.ts';
 
-const build = () => {
+export const build = () => {
 	try {
 		print.fancy('Starting optimized build...');
 
