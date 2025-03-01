@@ -3,7 +3,7 @@
     "style": "sass --watch ./src/styles:./dist/css", 
     "build": "deno run --allow-read --allow-write --allow-env ./src/scripts/build.ts",
     "test": "deno test --allow-read --allow-write --allow-env --parallel",
-    "coverage": "deno test --allow-read --allow-env --parallel --coverage && deno coverage --exclude=fixtures --exclude=test --html && open coverage/html/index.html",
+    "coverage": "deno test --allow-read --allow-env --parallel --coverage && deno coverage --exclude=fixtures --exclude=test --html",
     "clean": "deno run --allow-read --allow-write --allow-env ./src/scripts/clean.ts"
   },
   "imports": {
