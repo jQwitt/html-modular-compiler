@@ -2,7 +2,7 @@ import print from '../lib/console/index.ts';
 import {
 	buildComponentMap,
 	injectComponents,
-	injectTemplatedValues,
+	injectTemplateValues,
 } from '../lib/helpers/index.ts';
 import { decoder, ENTRY_POINT, OUTPUT_DIR } from '../lib/index.ts';
 import parse from '../lib/helpers/parser/dom.ts';
@@ -22,7 +22,7 @@ export const build = () => {
 		const withCompoennts = injectComponents(components, doc);
 
 		// gather and inject template values
-		const injected = injectTemplatedValues(templateValues, withCompoennts);
+		const injected = injectTemplateValues(templateValues, withCompoennts);
 
 		// Write the output
 		const output = injected?.documentElement?.outerHTML ?? '';
