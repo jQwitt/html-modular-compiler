@@ -1,7 +1,10 @@
 import { Document } from 'jsr:@b-fuze/deno-dom/wasm-noinit';
 import { HTMLComponentMap } from '../types.ts';
 
-const injectComponents = (components: HTMLComponentMap, doc: Document) => {
+const injectComponents = (
+	components: HTMLComponentMap,
+	doc: Document,
+): Document => {
 	for (
 		const { name, attributes: baseAttributes } of Object.values(components)
 	) {

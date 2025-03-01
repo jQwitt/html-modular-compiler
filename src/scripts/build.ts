@@ -1,9 +1,13 @@
 import print from '../lib/console/index.ts';
-import buildComponentMap from '../lib/helpers/buildComponentMap.ts';
+import {
+	buildComponentMap,
+	injectComponents,
+	injectTemplatedValues,
+} from '../lib/helpers/index.ts';
 import { decoder, ENTRY_POINT, OUTPUT_DIR } from '../lib/index.ts';
-import injectComponents from '../lib/helpers/injectComponents.ts';
 import parse from '../lib/helpers/parser/dom.ts';
 import { writeOutput } from '../lib/helpers/fs/writeOutput.ts';
+import templateValues from '../../template-values.json' with { type: 'json' };
 
 export const build = () => {
 	try {
@@ -12,10 +16,13 @@ export const build = () => {
 		// Build Map of Known Components
 		const components = buildComponentMap();
 
-		// Parse the entry point and inject components
+		// Parse the entry point, inject components
 		const entry = decoder.decode(Deno.readFileSync(ENTRY_POINT));
 		const doc = parse(entry, 'text/html');
-		const injected = injectComponents(components, doc);
+		const withCompoennts = injectComponents(components, doc);
+
+		// gather and inject template values
+		const injected = injectTemplatedValues(templateValues, withCompoennts);
 
 		// Write the output
 		const output = injected?.documentElement?.outerHTML ?? '';

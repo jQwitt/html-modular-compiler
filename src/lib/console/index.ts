@@ -13,6 +13,10 @@ const fail = (str: string) => {
 	console.log(chalk.red.bold(str));
 };
 
+const warn = (str: string) => {
+	console.log(chalk.yellow(str));
+};
+
 const fileRemoved = (str: string) => {
 	console.log(chalk.red('removed: '), str);
 };
@@ -21,4 +25,4 @@ const standard = (str: string) => {
 	console.log(chalk.gray(str));
 };
 
-export default { fancy, success, fail, fileRemoved, standard };
+export default { fancy, success, fail, warn, fileRemoved, standard };
