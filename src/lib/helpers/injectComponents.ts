@@ -1,12 +1,15 @@
 import { Document } from 'jsr:@b-fuze/deno-dom/wasm-noinit';
 import { HTMLComponentMap } from '../types.ts';
+import parse from './parser/dom.ts';
 
 const injectComponents = (
 	components: HTMLComponentMap,
 	doc: Document,
 ): Document => {
 	for (
-		const { name, attributes: baseAttributes } of Object.values(components)
+		const { name, base, attributes: baseAttributes } of Object.values(
+			components,
+		)
 	) {
 		const found = doc.querySelectorAll(name);
 
@@ -23,6 +26,11 @@ const injectComponents = (
 			for (const [key, value] of attrs) {
 				element.setAttribute(key, value);
 			}
+
+			// replace the innerHTML with our component
+			element.innerHTML =
+				parse(base, 'text/html').documentElement?.innerHTML ??
+					element.innerHTML;
 		}
 	}
 
