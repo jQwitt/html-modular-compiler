@@ -1,11 +1,11 @@
 import { describe, it } from "jsr:@std/testing/bdd";
 import { expect } from "jsr:@std/expect";
-import { parseAttributes } from "../../../../src/lib/helpers/parser/index.ts";
+import { parseTopLevelAttributes } from "../../../../src/lib/helpers/parser/index.ts";
 
 describe("parser/attributes", () => {
   it("returns null for empty HTML string", () => {
     const raw = "";
-    const result = parseAttributes(raw);
+    const result = parseTopLevelAttributes(raw);
 
     expect(result).toBe(null);
   });
@@ -16,7 +16,7 @@ describe("parser/attributes", () => {
       `<element attributes='">`,
       `<elementattributes="">`,
     ];
-    const results = raw.map((str) => parseAttributes(str));
+    const results = raw.map((str) => parseTopLevelAttributes(str));
 
     for (const result of results) {
       expect(result).toBe(null);
@@ -25,21 +25,21 @@ describe("parser/attributes", () => {
 
   it("returns parsed attributes", () => {
     const raw = '<element attribute="value">';
-    const result = parseAttributes(raw);
+    const result = parseTopLevelAttributes(raw);
 
     expect(result).toEqual({ attribute: "value" });
   });
 
   it("returns parsed attributes with spaced values", () => {
     const raw = '<element style="color: red">';
-    const result = parseAttributes(raw);
+    const result = parseTopLevelAttributes(raw);
 
     expect(result).toEqual({ style: "color: red" });
   });
 
   it("returns parsed attributes with templated values", () => {
     const raw = '<element class="class {{classes}}">';
-    const result = parseAttributes(raw);
+    const result = parseTopLevelAttributes(raw);
 
     expect(result).toEqual({ class: "class {{classes}}" });
   });

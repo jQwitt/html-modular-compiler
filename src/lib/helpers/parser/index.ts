@@ -1,3 +1,3 @@
-import parseAttributes from "./attributes.ts";
+import parseTopLevelAttributes from './attributes.ts';
 
-export { parseAttributes };
+export { parseTopLevelAttributes };
