@@ -24,9 +24,9 @@ const injectComponents = (
 
 			// replace the element with our base components html if we don't supply text
 			if (!element.innerText) {
-				element.innerHTML =
+				element.outerHTML =
 					parse(base, 'text/html').documentElement?.innerHTML ??
-						element.innerHTML;
+						element.outerHTML;
 			}
 
 			// apply computed attributes
