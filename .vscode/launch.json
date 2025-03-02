@@ -7,7 +7,7 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "/Users/jackwitt/.deno/bin/deno",
-            "runtimeArgs": ["run", "--inspect-brk", "-A", "${workspaceFolder}/scripts/build.ts"],
+            "runtimeArgs": ["run", "--inspect-brk", "-A", "${workspaceFolder}/src/scripts/build.ts"],
             "attachSimplePort": 9229,
             "outputCapture": "std"
         },
