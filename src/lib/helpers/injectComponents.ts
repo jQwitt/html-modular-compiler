@@ -22,15 +22,18 @@ const injectComponents = (
 				merged[key] = attr ? `${base} ${attr.value}` : base;
 			}
 
+			// replace the element with our base components html if we don't supply text
+			if (!element.innerText) {
+				element.innerHTML =
+					parse(base, 'text/html').documentElement?.innerHTML ??
+						element.innerHTML;
+			}
+
+			// apply computed attributes
 			const attrs = Object.entries(merged);
 			for (const [key, value] of attrs) {
 				element.setAttribute(key, value);
 			}
-
-			// replace the innerHTML with our component
-			element.innerHTML =
-				parse(base, 'text/html').documentElement?.innerHTML ??
-					element.innerHTML;
 		}
 	}
 
