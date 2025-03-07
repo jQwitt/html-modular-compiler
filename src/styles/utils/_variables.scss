@@ -11,6 +11,8 @@
 
 	--border-radius: 0.35rem;
 	--border-color: #7e7c80;
+
+	--icon-small: 2rem;
 }
 
 $text: var(--text);
@@ -24,3 +26,5 @@ $accent: var(--accent);
 
 $border-radius: var(--border-radius);
 $border-color: var(--border-color);
+
+$icon-small: var(--icon-small);

@@ -1,11 +1,12 @@
 @use '../utils/variables' as var;
 
-.floating-header {
+.floating-contact {
 	position: fixed;
-	top: 0.5rem;
-	left: 0.5rem;
+	bottom: 0.5rem;
 	right: 0.5rem;
 	z-index: 100;
+
+	display: flex;
 
 	border-radius: var.$border-radius;
 	border: 1px solid var.$border-color;
@@ -15,5 +16,17 @@
 		width: 20vw;
 		max-width: 120px;
 		height: auto;
+	}
+
+	&-socials {
+		padding-right: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+
+		& svg {
+			fill: var.$text;
+			width: var.$icon-small;
+		}
 	}
 }
