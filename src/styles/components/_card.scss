@@ -13,7 +13,7 @@
 	transition: background 100ms ease-in-out;
 
 	&:hover, &:focus {
-		background: var.$content-light;
+		background: var.$content-hover;
 	}
 
 	&.animated-border {

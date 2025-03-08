@@ -2,8 +2,8 @@
 :root {
 	--text: #d1defb;
 	--background: #04060b;
-	--content: #151c2b;
-	--content-light: #253043;
+	--content: #0c1424;
+	--content-hover: #1f2939;
 	--primary: #7492f4;
 	--secondary: #8d0b9c;
 	--secondary-muted: #4c60a1;
@@ -21,7 +21,7 @@
 $text: var(--text);
 $background: var(--background);
 $content: var(--content);
-$content-light: var(--content-light);
+$content-hover: var(--content-hover);
 $primary: var(--primary);
 $secondary: var(--secondary);
 $secondary-muted: var(--secondary-muted);
