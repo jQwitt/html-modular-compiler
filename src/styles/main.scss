@@ -3,15 +3,16 @@
 @use 'utils/animations';
 
 @use 'components/floating-contact';
+@use 'components/card';
 @use 'components/hook';
 
-* {
+html {
+	box-sizing: border-box;
 	background: var.$background;
 	color: var.$text;
 }
-
-body {
-	margin: 0;
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 
 button {

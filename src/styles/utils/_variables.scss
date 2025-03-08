@@ -13,6 +13,9 @@
 	--border-color: #7e7c80;
 
 	--icon-small: 2rem;
+
+	--layer-behind: -1;
+	--layer-floating: 100;
 }
 
 $text: var(--text);
@@ -28,3 +31,6 @@ $border-radius: var(--border-radius);
 $border-color: var(--border-color);
 
 $icon-small: var(--icon-small);
+
+$layer-behind: var(--layer-behind);
+$layer-floating: var(--layer-floating);
