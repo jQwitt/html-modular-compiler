@@ -22,7 +22,7 @@ const injectComponents = (
 				merged[key] = attr ? `${base} ${attr.value}` : base;
 			}
 
-			// replace the element with our base components html if we don't supply text
+			// replace the element with our base components
 			element.outerHTML =
 				parse(base, 'text/html').documentElement?.innerHTML ??
 					element.outerHTML;

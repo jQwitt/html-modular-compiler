@@ -1,6 +1,7 @@
 {
     "title": "jackwitt.dev",
-    "hookText": "Jack Witt",
-    "hookDescription": "Passionate full-stack developer creating elegent, dynamic and accessible digital experiences.",
-    "tagLine_experience": "Work Experience"
+    "hook_header": "Jack Witt",
+    "hook_description": "Passionate full-stack developer creating elegent, dynamic and accessible digital experiences.",
+    "experience_header": "Work Experience",
+    "experience_description": "test"
 }
