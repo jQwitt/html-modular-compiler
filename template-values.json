@@ -3,5 +3,7 @@
     "hook_header": "Jack Witt",
     "hook_description": "Passionate full-stack developer creating elegent, dynamic and accessible digital experiences.",
     "experience_header": "Work Experience",
-    "experience_description": "Over the past 8 years, I've worked hard to build a well-rounded web development skillset. Starting with the fundamentals, I've gained solid experience in both frontend and backend development."
+    "experience_description": "Over the past 8 years, I've worked hard to build a well-rounded web development skillset. Starting with the fundamentals, I've gained solid experience in both frontend and backend development.",
+    "projects_header": "Projects",
+    "projects_description": "Outside of work, I enjoy working on personal projects to learn new skills and create fun things."
 }
