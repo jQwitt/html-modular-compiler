@@ -1,0 +1,18 @@
+@use '../utils/variables' as var;
+
+.career-timeline {
+	position: relative;
+	width: 100%;
+	padding-left: 2rem;
+
+	&-progress-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		min-width: 0.5rem;
+
+		border-radius: var.$border-radius;
+		background: var.$linear-gradient-main;
+	}
+}
