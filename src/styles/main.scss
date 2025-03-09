@@ -10,7 +10,14 @@ html {
 	box-sizing: border-box;
 	background: var.$background;
 	color: var.$text;
+
+	overflow-x: hidden;
 }
+
+body {
+	margin: 0;
+}
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
