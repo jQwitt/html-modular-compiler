@@ -2,8 +2,9 @@
 @use 'utils/text';
 @use 'utils/animations';
 
-@use 'components/floating-contact';
 @use 'components/card';
+@use 'components/floating-contact';
+@use 'components/gradient-text';
 @use 'components/hook';
 
 html {

@@ -1,0 +1,20 @@
+@use '../utils/variables' as var;
+
+.gradient-text {
+	margin: 0;
+
+	background: linear-gradient(
+		to right,
+		var.$primary,
+		var.$secondary,
+		var.$accent
+	);
+	background-size: 200%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+
+	animation: animated-text-gradient 5s linear infinite alternate;
+}
