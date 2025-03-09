@@ -1,6 +1,6 @@
 import { COMPONENTS_DIR, decoder } from '../index.ts';
 import { HTMLComponentMap } from '../types.ts';
-import { parseTopLevelAttributes } from './parser/index.ts';
+import { parseTag, parseTopLevelAttributes } from './parser/index.ts';
 
 const buildComponentMap = () => {
 	const components = Deno.readDirSync(COMPONENTS_DIR);
@@ -16,9 +16,11 @@ const buildComponentMap = () => {
 			Deno.readFileSync(`${COMPONENTS_DIR}/${name}`),
 		);
 		const attributes = parseTopLevelAttributes(base);
+		const tag = parseTag(base);
 
 		map[key] = {
 			name: key,
+			tag,
 			base,
 			attributes,
 		};
