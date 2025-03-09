@@ -3,22 +3,16 @@
 .hook {
 	width: 100vw;
 
-	&-text {
-		margin: 0;
+	& .background {
+		width: 100vw;
+		height: 50vh;
 
 		background: linear-gradient(
-			to right,
+			28deg,
 			var.$primary,
 			var.$secondary,
 			var.$accent
 		);
-		background-size: 200%;
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-moz-background-clip: text;
-		-moz-text-fill-color: transparent;
-
-		animation: animated-text-gradient 5s linear infinite alternate;
+		border-bottom-left-radius: var.$border-radius-corner;
 	}
 }

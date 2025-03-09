@@ -9,7 +9,8 @@
 	--secondary-muted: #4c60a1;
 	--accent: #ec1463;
 
-	--border-radius: 0.35rem;
+	--border-radius: 0.65rem;
+	--border-radius-corner: 20vh;
 	--border-color: #7e7c80;
 
 	--icon-small: 2rem;
@@ -28,6 +29,7 @@ $secondary-muted: var(--secondary-muted);
 $accent: var(--accent);
 
 $border-radius: var(--border-radius);
+$border-radius-corner: var(--border-radius-corner);
 $border-color: var(--border-color);
 
 $icon-small: var(--icon-small);
