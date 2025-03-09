@@ -5,7 +5,15 @@
 	width: 100vw;
 	height: 20vh;
 
-	background: linear-gradient(-28deg, var.$gradient);
+	&.primary {
+		background: linear-gradient(28deg, var.$primary, var.$secondary);
+	}
+	&.secondary {
+		background: linear-gradient(28deg, var.$secondary, var.$accent);
+	}
+	&.accent {
+		background: linear-gradient(28deg, var.$accent, var.$primary);
+	}
 
 	& .background:nth-child(1) {
 		position: absolute;

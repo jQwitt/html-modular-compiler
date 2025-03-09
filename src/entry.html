@@ -20,15 +20,31 @@
 				<p>testCard</p>
 			</card> -->
 		</div>
-		<divider></divider>
+		<div class="divider primary">
+			<div class="background"></div>
+			<div class="background"></div>
+		</div>
 		<div class="content-block">
 			<h2 class="gradient-text">{projects_header}</h2>
 			<h3>{projects_description}</h3>
 		</div>
-		<divider></divider>
+		<div class="divider secondary">
+			<div class="background"></div>
+			<div class="background"></div>
+		</div>
 		<div class="content-block">
 			<h2 class="gradient-text">{contributions_header}</h2>
 			<h3>{contributions_description}</h3>
 		</div>
+		<div class="divider accent">
+			<div class="background"></div>
+			<div class="background"></div>
+		</div>
+
+		<!-- TODO can remove divider and have entire page just use an animated 
+			TODO linear grad background with transparency + abs text hook
+			
+			TODO divider cutout is a transparent border radius el masking a background themed el
+		-->
 	</body>
 </html>
