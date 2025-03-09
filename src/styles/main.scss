@@ -1,6 +1,7 @@
-@use 'utils/variables' as var;
-@use 'utils/text';
 @use 'utils/animations';
+@use 'utils/structures';
+@use 'utils/text';
+@use 'utils/variables' as var;
 
 @use 'components/card';
 @use 'components/floating-contact';
