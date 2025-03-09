@@ -11,6 +11,7 @@
 
 	--border-radius: 0.65rem;
 	--border-radius-corner: 20vh;
+	--border: 1px solid var(--border-color);
 	--border-color: #7e7c80;
 
 	--icon-small: 2rem;
@@ -30,6 +31,7 @@ $accent: var(--accent);
 
 $border-radius: var(--border-radius);
 $border-radius-corner: var(--border-radius-corner);
+$border: var(--border);
 $border-color: var(--border-color);
 
 $icon-small: var(--icon-small);
