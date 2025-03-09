@@ -1,0 +1,31 @@
+@use '../utils/variables' as var;
+
+.divider {
+	position: relative;
+	width: 100vw;
+	height: 20vh;
+
+	background: linear-gradient(-28deg, var.$gradient);
+
+	& .background:nth-child(1) {
+		position: absolute;
+		top: -1;
+		left: 0;
+		width: 100%;
+		height: 25%;
+
+		background-color: var.$background;
+		border-bottom-right-radius: var.$border-radius-corner;
+	}
+
+	& .background:nth-child(2) {
+		position: absolute;
+		bottom: -1;
+		right: 0;
+		width: 100%;
+		height: 25%;
+
+		background-color: var.$background;
+		border-top-left-radius: var.$border-radius-corner;
+	}
+}

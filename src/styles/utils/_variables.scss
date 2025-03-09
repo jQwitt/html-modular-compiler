@@ -8,11 +8,9 @@
 	--secondary: #8d0b9c;
 	--secondary-muted: #4c60a1;
 	--accent: #ec1463;
-	--linear-gradient-main: linear-gradient(
-		var(--primary),
-		var(--secondary),
-		var(--accent)
-	);
+
+	--gradient: var(--primary), var(--secondary), var(--accent);
+	--linear-gradient-main: linear-gradient(var(--gradient));
 
 	--border-radius: 0.65rem;
 	--border-radius-corner: 6rem;
@@ -33,6 +31,8 @@ $primary: var(--primary);
 $secondary: var(--secondary);
 $secondary-muted: var(--secondary-muted);
 $accent: var(--accent);
+
+$gradient: var(--gradient);
 $linear-gradient-main: var(--linear-gradient-main);
 
 $border-radius: var(--border-radius);
