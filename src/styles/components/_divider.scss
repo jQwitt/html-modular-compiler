@@ -6,6 +6,10 @@
 	width: 100vw;
 	height: 20vh;
 
+	&.invert {
+		transform: scaleY(-1);
+	}
+
 	& .divider-left {
 		position: absolute;
 		top: 0;
