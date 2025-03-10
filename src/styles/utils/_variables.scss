@@ -5,9 +5,12 @@
 	--content: #0c1424;
 	--content-hover: #1f2939;
 	--primary: #7492f4;
+	--primary-to-secondary: #8092f4;
 	--secondary: #8d0b9c;
 	--secondary-muted: #4c60a1;
+	--secondary-to-accent: #bc0f9c;
 	--accent: #ec1463;
+	--accent-to-primary: #b092f4;
 
 	--gradient: var(--primary), var(--secondary), var(--accent);
 	--linear-gradient-main: linear-gradient(var(--gradient));
@@ -20,6 +23,7 @@
 	--icon-small: 2rem;
 
 	--layer-behind: -1;
+	--layer-above: 1;
 	--layer-floating: 100;
 }
 
@@ -27,10 +31,14 @@ $text: var(--text);
 $background: var(--background);
 $content: var(--content);
 $content-hover: var(--content-hover);
+
 $primary: var(--primary);
+$primary-to-secondary: var(--primary-to-secondary);
 $secondary: var(--secondary);
 $secondary-muted: var(--secondary-muted);
+$secondary-to-accent: var(--secondary-to-accent);
 $accent: var(--accent);
+$accent-to-primary: var(--accent-to-primary);
 
 $gradient: var(--gradient);
 $linear-gradient-main: var(--linear-gradient-main);
@@ -43,4 +51,5 @@ $border-color: var(--border-color);
 $icon-small: var(--icon-small);
 
 $layer-behind: var(--layer-behind);
+$layer-above: var(--layer-above);
 $layer-floating: var(--layer-floating);
