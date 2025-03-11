@@ -2,16 +2,15 @@
 
 .floating-contact {
 	position: fixed;
-	bottom: 0.5rem;
-	right: 0.5rem;
+	bottom: 2vh;
+	right: 2vw;
 	z-index: var.$layer-floating;
 
 	display: flex;
 
-	border-radius: var.$border-radius;
-	border: 1px solid var.$border-color;
-	padding: 0.25rem;
-	background-color: var.$content;
+	border-radius: var.$border-radius-corner;
+	padding: 0.25rem 1rem;
+	background-color: var.$content-hover;
 
 	&-logo {
 		width: 20vw;
