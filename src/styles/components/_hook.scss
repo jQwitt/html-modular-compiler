@@ -13,8 +13,7 @@
 
 	& .background:nth-child(1) {
 		width: 100vw;
-		height: 90vh;
-		min-height: 20rem;
+		min-height: 70vh;
 
 		background: linear-gradient(
 			28deg,
@@ -24,7 +23,7 @@
 		);
 		border-bottom-left-radius: var.$border-radius-corner;
 
-		padding: 10rem 8%;
+		padding: 5rem 8%;
 	}
 
 	& .background:nth-child(2) {
