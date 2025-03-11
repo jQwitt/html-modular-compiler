@@ -3,9 +3,17 @@
 .hook {
 	width: 100vw;
 
+	& .signature {
+		translate: -10% -30%;
+		width: 7rem;
+		height: 7rem;
+
+		filter: brightness(100);
+	}
+
 	& .background:nth-child(1) {
 		width: 100vw;
-		height: 50vh;
+		height: 60vh;
 		min-height: 20rem;
 
 		background: linear-gradient(
