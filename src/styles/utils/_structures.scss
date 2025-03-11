@@ -7,6 +7,13 @@
 	& > h3 {
 		margin-bottom: 3rem;
 	}
+
+	& > .scroll-next {
+		margin: 1rem 0;
+		translate: 0 50%;
+		fill: var.$content-hover;
+		width: var.$icon-small;
+	}
 }
 
 .card-container {
