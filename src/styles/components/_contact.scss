@@ -1,0 +1,15 @@
+@use '../utils/variables' as var;
+
+.contact {
+	padding-top: 2rem;
+	padding-bottom: 40vh;
+
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+
+	& svg {
+		fill: var.$text;
+		width: var.$icon-medium;
+	}
+}

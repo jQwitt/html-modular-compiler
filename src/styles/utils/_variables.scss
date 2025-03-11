@@ -20,6 +20,7 @@
 	--border: 1px solid var(--border-color);
 	--border-color: #7e7c80;
 
+	--icon-medium: 2.75rem;
 	--icon-small: 2rem;
 	--icon-xsmall: 1.125rem;
 
@@ -49,6 +50,7 @@ $border-radius-corner: var(--border-radius-corner);
 $border: var(--border);
 $border-color: var(--border-color);
 
+$icon-medium: var(--icon-medium);
 $icon-small: var(--icon-small);
 $icon-xsmall: var(--icon-xsmall);
 
