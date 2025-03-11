@@ -1,0 +1,29 @@
+@use '../utils/variables' as var;
+
+.career-timeline-container {
+	display: flex;
+	gap: 1rem;
+}
+
+.career-highlight {
+	width: auto;
+	min-height: 100%;
+	flex-grow: 1;
+
+	background-color: var.$content;
+	border-radius: var.$border-radius;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	transition: all 200ms ease-in-out;
+
+	&:hover {
+		background-color: var.$content-hover;
+	}
+
+	@media screen and (max-width: calc(var.$screen-mobile * 1.5)) {
+		display: none;
+	}
+}

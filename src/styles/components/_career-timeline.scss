@@ -2,7 +2,6 @@
 
 .career-timeline {
 	position: relative;
-	width: 100%;
 	padding-left: 2rem;
 
 	&-progress-bar {
@@ -21,6 +20,9 @@
 	}
 
 	&-education {
+		& h5 {
+			margin-top: 0;
+		}
 		& p {
 			padding-left: 1rem;
 		}

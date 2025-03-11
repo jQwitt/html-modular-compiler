@@ -12,7 +12,7 @@
 
 	background: var.$content;
 	border-radius: var.$border-radius;
-	transition: background 100ms ease-in-out;
+	transition: background 200ms ease-in-out;
 
 	&-header, &-header-links {
 		display: flex;
@@ -29,30 +29,38 @@
 		}
 	}
 
+	&::after {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		translate: -50% -49%;
+
+		border-radius: var.$border-radius;
+		background: conic-gradient(
+			from var(--angle),
+			var.$primary,
+			var.$secondary,
+			var.$accent,
+			var.$primary
+		);
+		z-index: var.$layer-behind;
+
+		animation: rotate-angle-full 4s linear infinite;
+		animation-fill-mode: forwards;
+
+		transition: all 200ms ease-in-out;
+	}
+
 	&:hover, &:focus {
 		background: var.$content-hover;
 
 		&::after {
-			content: '';
-			position: absolute;
-			height: 101%;
-			width: 101%;
-			top: 50%;
-			left: 50%;
+			height: 104%;
+			width: 102%;
 			translate: -50% -50%;
-
-			border-radius: var.$border-radius;
-			background: conic-gradient(
-				from var(--angle),
-				var.$primary,
-				var.$secondary,
-				var.$accent,
-				var.$primary
-			);
-			z-index: var.$layer-behind;
-
-			animation: rotate-angle-full 4s linear infinite;
-			animation-fill-mode: forwards;
 		}
 	}
 }
