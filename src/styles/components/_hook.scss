@@ -13,7 +13,7 @@
 
 	& .background:nth-child(1) {
 		width: 100vw;
-		height: 60vh;
+		height: 90vh;
 		min-height: 20rem;
 
 		background: linear-gradient(
@@ -24,7 +24,7 @@
 		);
 		border-bottom-left-radius: var.$border-radius-corner;
 
-		padding: 2rem 8%;
+		padding: 10rem 8%;
 	}
 
 	& .background:nth-child(2) {
@@ -56,9 +56,39 @@
 	h2 {
 		margin-top: 15vh;
 		margin-bottom: 0rem;
+
+		opacity: 0;
+		animation: fade-in-left 400ms ease-in-out 1;
+		animation-fill-mode: forwards;
 	}
 
 	h3 {
 		margin-top: 0.125rem;
+
+		opacity: 0;
+		animation: fade-in-left 400ms ease-in-out 1 100ms;
+		animation-fill-mode: forwards;
+	}
+
+	& .signature-container {
+		opacity: 0;
+		animation: fade-in-left 400ms ease-in-out 1 200ms;
+		animation-fill-mode: forwards;
+	}
+
+	& .scroll-next {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+		margin-top: 3rem;
+
+		opacity: 0;
+		animation: fade-in-left 400ms ease-in-out 1 300ms;
+		animation-fill-mode: forwards;
+
+		& svg {
+			fill: var.$text;
+			width: var.$icon-small;
+		}
 	}
 }
