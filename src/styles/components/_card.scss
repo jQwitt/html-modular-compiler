@@ -4,25 +4,39 @@
 	display: block;
 	position: relative;
 	width: fit-content;
+	max-width: 40rem;
 	margin: 0 auto;
 	text-align: left;
-	padding: 5rem;
-	margin: 0.5rem;
+	padding: 1rem;
+	margin-bottom: 0.25rem;
 
 	background: var.$content;
 	border-radius: var.$border-radius;
 	transition: background 100ms ease-in-out;
 
-	&:hover, &:focus {
-		background: var.$content-hover;
+	&-header, &-header-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	&.animated-border {
+	&-header-links {
+		gap: 0.75rem;
+
+		& svg {
+			fill: var.$text;
+			width: var.$icon-xsmall;
+		}
+	}
+
+	&:hover, &:focus {
+		background: var.$content-hover;
+
 		&::after {
 			content: '';
 			position: absolute;
-			height: 102%;
-			width: 102%;
+			height: 101%;
+			width: 101%;
 			top: 50%;
 			left: 50%;
 			translate: -50% -50%;
@@ -39,8 +53,6 @@
 
 			animation: rotate-angle-full 4s linear infinite;
 			animation-fill-mode: forwards;
-
-			transition: all 200ms ease-in-out;
 		}
 	}
 }

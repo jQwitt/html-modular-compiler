@@ -21,6 +21,7 @@
 	--border-color: #7e7c80;
 
 	--icon-small: 2rem;
+	--icon-xsmall: 1.125rem;
 
 	--layer-behind: -1;
 	--layer-above: 1;
@@ -49,7 +50,11 @@ $border: var(--border);
 $border-color: var(--border-color);
 
 $icon-small: var(--icon-small);
+$icon-xsmall: var(--icon-xsmall);
 
 $layer-behind: var(--layer-behind);
 $layer-above: var(--layer-above);
 $layer-floating: var(--layer-floating);
+
+$screen-mobile: 600px;
+$screen-tablet: 1200px;
