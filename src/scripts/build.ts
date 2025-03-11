@@ -23,6 +23,10 @@ export const build = () => {
 
 		// gather and inject template values
 		const injected = injectTemplateValues(templateValues, withCompoennts);
+		injected.documentElement?.setAttribute(
+			'lang',
+			'en-US',
+		);
 
 		// Write the output
 		const output = injected?.documentElement?.outerHTML ?? '';
