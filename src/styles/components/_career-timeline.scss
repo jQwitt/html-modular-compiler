@@ -12,7 +12,22 @@
 		min-width: 0.5rem;
 
 		border-radius: var.$border-radius;
-		background: var.$linear-gradient-main;
+		background: var.$content;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: clamp(
+				0%,
+				calc(var(--scroll-percentage) * 3) - 25%,
+				100%
+			);
+			border-radius: var.$border-radius;
+			background: var.$linear-gradient-main;
+		}
 	}
 
 	&-position {

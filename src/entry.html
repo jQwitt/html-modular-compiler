@@ -223,6 +223,25 @@
 					</svg>
 				</a>
 			</div>
+			<script>
+				window.addEventListener(
+					'scroll',
+					() => {
+						const scrollHeight =
+							document.documentElement
+								.scrollHeight -
+							window.innerHeight;
+						const scrolled = window.scrollY;
+						const scrollPercentage =
+							(scrolled / scrollHeight) * 100;
+
+						document.body.style.setProperty(
+							'--scroll-percentage',
+							scrollPercentage + '%',
+						);
+					},
+				);
+			</script>
 		</div>
 	</body>
 </html>
