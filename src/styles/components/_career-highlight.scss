@@ -6,9 +6,10 @@
 }
 
 .career-highlight {
-	width: auto;
-	min-height: 100%;
+	position: sticky;
+	top: calc(80vh - 10rem);
 	flex-grow: 1;
+	height: 10rem;
 
 	background-color: var.$content;
 	border-radius: var.$border-radius;
