@@ -11,7 +11,7 @@ export const writeOutput = (output: string) => {
 
 	Deno.writeFileSync(
 		`${OUTPUT_DIR}/index.html`,
-		encoder.encode(output),
+		encoder.encode('<!DOCTYPE html>' + output),
 	);
 	return true;
 };
