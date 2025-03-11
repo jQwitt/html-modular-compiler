@@ -1,0 +1,36 @@
+@use '../utils/variables' as var;
+
+.hook .scroll-next {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	margin-top: 3rem;
+
+	opacity: 0;
+	animation: fade-in-left 400ms ease-in-out 1 300ms;
+	animation-fill-mode: forwards;
+
+	& svg {
+		fill: var.$text;
+		width: var.$icon-small;
+		transition: all 200ms ease-in-out;
+
+		&:hover {
+			fill: var.$content;
+			translate: 0 10%;
+		}
+	}
+}
+
+.content-block > .scroll-next {
+	margin: 1rem 0;
+	translate: 0 50%;
+	fill: var.$content-hover;
+	width: var.$icon-small;
+	transition: all 200ms ease-in-out;
+
+	&:hover {
+		fill: var.$accent;
+		translate: 0 70%;
+	}
+}

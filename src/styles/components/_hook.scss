@@ -74,20 +74,4 @@
 		animation: fade-in-left 400ms ease-in-out 1 200ms;
 		animation-fill-mode: forwards;
 	}
-
-	& .scroll-next {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-		margin-top: 3rem;
-
-		opacity: 0;
-		animation: fade-in-left 400ms ease-in-out 1 300ms;
-		animation-fill-mode: forwards;
-
-		& svg {
-			fill: var.$text;
-			width: var.$icon-small;
-		}
-	}
 }
