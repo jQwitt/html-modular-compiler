@@ -40,7 +40,7 @@
 		background-color: var.$content-hover;
 	}
 
-	@media screen and (max-width: calc(var.$screen-mobile * 1.5)) {
+	@media screen and (max-width: calc(var.$screen-mobile * 1.2)) {
 		display: none;
 	}
 }

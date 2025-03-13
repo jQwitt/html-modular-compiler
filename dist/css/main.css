@@ -132,7 +132,6 @@ h3, h5, p {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  font-weight: 400;
 }
 
 h3 {
@@ -368,6 +367,7 @@ p {
 
 .hook {
   width: 100vw;
+  overflow-x: hidden;
 }
 .hook .signature {
   translate: -10% -30%;
@@ -485,7 +485,7 @@ p {
 .career-highlight:hover {
   background-color: var(--content-hover);
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 720px) {
   .career-highlight {
     display: none;
   }
@@ -501,7 +501,6 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
 }
 
 *, *:before, *:after {

@@ -2,6 +2,7 @@
 
 .hook {
 	width: 100vw;
+	overflow-x: hidden;
 
 	& .signature {
 		translate: -10% -30%;
