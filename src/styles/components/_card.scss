@@ -8,6 +8,7 @@
 	margin: 0 auto;
 	text-align: left;
 	padding: 1rem;
+	padding-bottom: 4rem;
 	margin-bottom: 0.25rem;
 
 	background: var.$content;
@@ -30,6 +31,9 @@
 	}
 
 	&-technologies {
+		position: absolute;
+		bottom: 0;
+		padding: 1rem 0.25rem;
 		display: flex;
 		align-items: center;
 		gap: var.$technologies-gap;
