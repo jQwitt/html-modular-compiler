@@ -1,0 +1,32 @@
+.technology-icon {
+	width: 1.5rem;
+	height: auto;
+
+	border-radius: 2px;
+
+	&.html-icon, &.css-icon {
+		margin-top: -4px;
+	}
+
+	&.jquery-icon, &.nextjs-icon, &.htmx-icon {
+		width: 4rem;
+		filter: invert(1);
+	}
+
+	&.apollo-icon {
+		filter: invert(1);
+	}
+
+	&.angular-icon {
+		width: 4rem;
+	}
+
+	&.reactnative-icon {
+		width: 2.25rem;
+		filter: brightness(100);
+	}
+
+	&.firebase-icon {
+		height: 1.75rem;
+	}
+}

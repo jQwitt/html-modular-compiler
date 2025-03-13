@@ -32,18 +32,7 @@
 
 	&-position {
 		padding-left: 1rem;
-	}
 
-	&-education {
-		& h5 {
-			margin-top: 0;
-		}
-		& p {
-			padding-left: 1rem;
-		}
-	}
-
-	&-education, &-position {
 		& p:nth-child(1) {
 			font-weight: 300;
 			font-style: italic;
@@ -55,5 +44,12 @@
 			margin-top: -1rem;
 			font-size: 0.85rem;
 		}
+	}
+
+	&-technologies {
+		display: flex;
+		align-items: center;
+		gap: var.$technologies-gap;
+		overflow-x: scroll;
 	}
 }

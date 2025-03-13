@@ -4,7 +4,7 @@
 	display: block;
 	position: relative;
 	width: fit-content;
-	max-width: 40rem;
+	max-width: calc(100vw - 4rem);
 	margin: 0 auto;
 	text-align: left;
 	padding: 1rem;
@@ -27,6 +27,13 @@
 			fill: var.$text;
 			width: var.$icon-xsmall;
 		}
+	}
+
+	&-technologies {
+		display: flex;
+		align-items: center;
+		gap: var.$technologies-gap;
+		overflow-x: scroll;
 	}
 
 	&::after {

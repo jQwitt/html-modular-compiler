@@ -26,6 +26,32 @@
     translate: 0 0;
   }
 }
+.technology-icon {
+  width: 1.5rem;
+  height: auto;
+  border-radius: 2px;
+}
+.technology-icon.html-icon, .technology-icon.css-icon {
+  margin-top: -4px;
+}
+.technology-icon.jquery-icon, .technology-icon.nextjs-icon, .technology-icon.htmx-icon {
+  width: 4rem;
+  filter: invert(1);
+}
+.technology-icon.apollo-icon {
+  filter: invert(1);
+}
+.technology-icon.angular-icon {
+  width: 4rem;
+}
+.technology-icon.reactnative-icon {
+  width: 2.25rem;
+  filter: brightness(100);
+}
+.technology-icon.firebase-icon {
+  height: 1.75rem;
+}
+
 :root {
   --text: #d1defb;
   --background: #04060b;
@@ -51,6 +77,7 @@
   --layer-above: 1;
   --layer-floating: 100;
   --scroll-percentage: 0%;
+  --technologies-gap: 0.75rem;
 }
 
 .content-block {
@@ -126,7 +153,7 @@ p {
   display: block;
   position: relative;
   width: fit-content;
-  max-width: 40rem;
+  max-width: calc(100vw - 4rem);
   margin: 0 auto;
   text-align: left;
   padding: 1rem;
@@ -146,6 +173,12 @@ p {
 .card-header-links svg {
   fill: var(--text);
   width: var(--icon-xsmall);
+}
+.card-technologies {
+  display: flex;
+  align-items: center;
+  gap: var(--technologies-gap);
+  overflow-x: scroll;
 }
 .card::after {
   content: "";
@@ -197,22 +230,22 @@ p {
 .career-timeline-position {
   padding-left: 1rem;
 }
-.career-timeline-education h5 {
-  margin-top: 0;
-}
-.career-timeline-education p {
-  padding-left: 1rem;
-}
-.career-timeline-education p:nth-child(1), .career-timeline-position p:nth-child(1) {
+.career-timeline-position p:nth-child(1) {
   font-weight: 300;
   font-style: italic;
 }
-.career-timeline-education p:nth-child(2), .career-timeline-position p:nth-child(2) {
+.career-timeline-position p:nth-child(2) {
   margin-top: -1rem;
 }
-.career-timeline-education p:nth-child(3), .career-timeline-position p:nth-child(3) {
+.career-timeline-position p:nth-child(3) {
   margin-top: -1rem;
   font-size: 0.85rem;
+}
+.career-timeline-technologies {
+  display: flex;
+  align-items: center;
+  gap: var(--technologies-gap);
+  overflow-x: scroll;
 }
 
 .contact {
@@ -298,7 +331,7 @@ p {
   z-index: var(--layer-floating);
   display: flex;
   border-radius: var(--border-radius-corner);
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.5rem;
   background-color: var(--content-hover);
 }
 .floating-contact-logo {

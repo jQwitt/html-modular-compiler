@@ -29,6 +29,8 @@
 	--layer-floating: 100;
 
 	--scroll-percentage: 0%;
+
+	--technologies-gap: 0.75rem;
 }
 
 $text: var(--text);
@@ -59,6 +61,8 @@ $icon-xsmall: var(--icon-xsmall);
 $layer-behind: var(--layer-behind);
 $layer-above: var(--layer-above);
 $layer-floating: var(--layer-floating);
+
+$technologies-gap: var(--technologies-gap);
 
 $screen-mobile: 600px;
 $screen-tablet: 1200px;
