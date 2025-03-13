@@ -15,14 +15,14 @@
 			rel="preload"
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
 			as="style"
-    		onload="this.onload=null;this.rel='stylesheet'"
+			onload="this.onload=null;this.rel='stylesheet'"
 		>
 		<noscript>
-    		<link
-        		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        		rel="stylesheet"
-        		type="text/css"
-    		/>
+			<link
+				href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+				rel="stylesheet"
+				type="text/css"
+			/>
 		</noscript>
 
 		<!-- Custom CSS -->
@@ -31,6 +31,8 @@
 	<body>
 		<floating-contact></floating-contact>
 		<hook></hook>
+
+		<!-- Experience -->
 		<div class="content-block" id="pre-experience">
 			<h2 class="gradient-text">{experience_header}</h2>
 			<h3>{experience_description}</h3>
@@ -58,6 +60,7 @@
 			<div class="divider-right"></div>
 		</div>
 
+		<!-- Projects -->
 		<div class="content-block">
 			<h2 class="gradient-text">{projects_header}</h2>
 			<h3>{projects_description}</h3>
@@ -94,8 +97,43 @@
 						<typescript-icon></typescript-icon>
 						<tailwind-icon></tailwind-icon>
 						<postgres-icon></postgres-icon>
+						<img
+							class="technology-icon cypress-icon"
+							src="./assets/cypress.svg"
+							alt="Cypress Logo"
+						/>
 					</div>
 				</card>
+
+				<card class="card">
+					<div class="card-header">
+						<h4>html-modular-compiler</h4>
+						<div class="card-header-links">
+							<a
+								href="https://github.com/jQwitt/html-modular-compiler"
+								target="_blank"
+								aria-label="View html-modular-compiler on GitHub"
+							>
+								<github-icon></github-icon>
+							</a>
+						</div>
+					</div>
+					<p class="card-description">
+						A simple find-and-replace static HTML compiler built to
+						generate pages using HTML components and SCSS Modules.
+						Used to construct this site!
+					</p>
+					<div class="card-technologies">
+						<img
+							class="technology-icon"
+							src="./assets/deno.svg"
+							alt="Deno Logo"
+						/>
+						<typescript-icon></typescript-icon>
+						<sass-icon></sass-icon>
+					</div>
+				</card>
+
 				<card class="card">
 					<div class="card-header">
 						<h4>cookbook.v2</h4>
@@ -166,6 +204,7 @@
 			<div class="divider-right"></div>
 		</div>
 
+		<!-- Contributions -->
 		<div class="content-block">
 			<h2 class="gradient-text">{contributions_header}</h2>
 			<h3>{contributions_description}</h3>
@@ -249,6 +288,7 @@
 			<div class="divider-right"></div>
 		</div>
 
+		<!-- Contact -->
 		<div class="content-block">
 			<h2 class="gradient-text">{contact_header}</h2>
 			<h3>{contact_description}</h3>

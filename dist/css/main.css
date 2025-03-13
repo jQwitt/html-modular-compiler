@@ -51,6 +51,9 @@
 .technology-icon.firebase-icon {
   height: 1.75rem;
 }
+.technology-icon.cypress-icon {
+  filter: brightness(3.5);
+}
 
 :root {
   --text: #d1defb;
