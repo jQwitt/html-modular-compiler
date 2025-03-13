@@ -8,6 +8,7 @@
 
 	&.invert {
 		padding-top: 4rem;
+		transform: scaleY(-1);
 	}
 
 	& .divider-left {
