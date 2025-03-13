@@ -2,7 +2,7 @@
 
 .hook {
 	width: 100vw;
-	contain: content;
+	overflow-x: hidden;
 
 	& .signature {
 		translate: -10% -30%;
@@ -17,7 +17,7 @@
 		min-height: 70vh;
 
 		background: linear-gradient(
-			28deg,
+			-36deg,
 			var.$primary,
 			var.$secondary,
 			var.$accent
@@ -39,17 +39,12 @@
 			content: '';
 			position: absolute;
 			top: 0;
-			left: 0;
-			width: 100%;
+			right: 0;
+			width: 5rem;
 			height: 99%;
-			background: linear-gradient(
-				28deg,
-				var.$primary,
-				var.$secondary,
-				var.$accent
-			);
+			background-color: var.$primary;
+			background-position: 200%;
 			z-index: var.$layer-behind;
-			translate: 78% 0;
 		}
 	}
 
