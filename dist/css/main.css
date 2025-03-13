@@ -370,7 +370,7 @@ p {
 
 .hook {
   width: 100vw;
-  overflow-x: hidden;
+  contain: content;
 }
 .hook .signature {
   translate: -10% -30%;
@@ -498,7 +498,6 @@ html {
   box-sizing: border-box;
   background: var(--background);
   color: var(--text);
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
